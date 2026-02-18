@@ -5,7 +5,7 @@
 ## Version: @project-version@
 ## IconAtlas: communities-icon-searchmagnifyingglass
 ## LoadOnDemand: 0
-## X-Curse-Project-ID: 
+## X-Curse-Project-ID: 1465310
 
 ## Category-enUS: Development Tools
 ## Category-deDE: Entwicklungstools
