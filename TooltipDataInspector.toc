@@ -1,4 +1,4 @@
-## Interface: 120001, 120000
+## Interface: 120105, 16001
 ## Title: TooltipDataInspector
 ## Author: Kemayo
 ## Notes: Exposes raw C_TooltipInfo / TooltipData structures in a separate frame
