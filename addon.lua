@@ -303,6 +303,7 @@ EventUtil.ContinueOnAddOnLoaded(myname, function()
 
     TooltipDataProcessor.AddTooltipPostCall(TooltipDataProcessor.AllTypes, function(tooltip, data)
         if not (InspectorFrame and InspectorFrame:IsShown()) then return end
+        if InspectorFrame.frozen then return end
         PopulateDataProvider(dataProvider, data)
     end)
 
@@ -313,6 +314,10 @@ SLASH_TOOLTIPDATAINSPECTOR1 = "/tdi"
 SLASH_TOOLTIPDATAINSPECTOR2 = "/tooltipdatainspector"
 SlashCmdList["TOOLTIPDATAINSPECTOR"] = function(msg)
     if not InspectorFrame then return end
+    if string.trim(msg) == "freeze" then
+        InspectorFrame.frozen = not InspectorFrame.frozen
+        return
+    end
     InspectorFrame:SetShown(not InspectorFrame:IsShown())
 end
 
